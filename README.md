@@ -113,7 +113,7 @@ At each level (k) of the algorithm, perform the following:
     |  |
     |  |  set j = r.right
     |  |  while j != r
-    |  |  |  cover column j (step 3.c)
+    |  |  |  cover column j.col (step 3.c)
     |  |  |  set j = j.right
     |  |    
     |  |  perform search at level (k+1)
@@ -122,7 +122,7 @@ At each level (k) of the algorithm, perform the following:
     |  |
     |  |  set j = r.left
     |  |  while j != r 
-    |  |  |  uncover column j
+    |  |  |  uncover column j.col
     |  |  |  set j = j.left
     |  |    
     |  |  r = r.down
