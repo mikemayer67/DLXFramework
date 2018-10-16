@@ -92,6 +92,13 @@ Using this double linked mesh, we no longer need to work with recursive copies o
 
 As an additinal performance enhancement, we take advantage of the tracking of number of rows available to each column. Specifically, at each level of the algorithm we choose a column (step 2) with the least number of associated rows:
 
+Before starting the algorithm
+
+    construct the mesh based on the input matrix A
+       create the root node and add a header node for each column in A
+       for each row i in A add a grid node to column j where A(i,j) = 1
+    initialize partial solution Q as the empty set
+
 At each level (k) of the algorithm, perform the following:
 
     set c = root.right
