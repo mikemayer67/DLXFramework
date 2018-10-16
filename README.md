@@ -1,5 +1,5 @@
 # DLX Framework
-##Swift Dancing Link (DLX) Solver
+### Swift Dancing Link (DLX) Solver
 
 This repository contains a handful of inter-related Swift frameworks implementing [Donald Knuth's Dancing Link algorithm](https://en.wikipedia.org/wiki/Dancing_Links).  
 
