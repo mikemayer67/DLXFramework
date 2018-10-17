@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2739C7842177472700F809C8 /* GridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C77F2177472700F809C8 /* GridNode.swift */; };
+		2739C7852177472700F809C8 /* HeaderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7802177472700F809C8 /* HeaderNode.swift */; };
+		2739C7862177472700F809C8 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7812177472700F809C8 /* DLX.swift */; };
+		2739C7872177472700F809C8 /* RootNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7822177472700F809C8 /* RootNode.swift */; };
+		2739C7882177472700F809C8 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7832177472700F809C8 /* Node.swift */; };
 		27E852B42176DC4200E4CA6A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E852B32176DC4200E4CA6A /* main.swift */; };
-		27E852D62176DE2800E4CA6A /* TestDriverFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E852D52176DE2800E4CA6A /* TestDriverFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,9 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2739C77F2177472700F809C8 /* GridNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridNode.swift; sourceTree = "<group>"; };
+		2739C7802177472700F809C8 /* HeaderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderNode.swift; sourceTree = "<group>"; };
+		2739C7812177472700F809C8 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLX.swift; sourceTree = "<group>"; };
+		2739C7822177472700F809C8 /* RootNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNode.swift; sourceTree = "<group>"; };
+		2739C7832177472700F809C8 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		27E852B02176DC4200E4CA6A /* TestDriver-OSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TestDriver-OSX"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E852B32176DC4200E4CA6A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		27E852D52176DE2800E4CA6A /* TestDriverFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TestDriverFramework.framework; path = ../../../DerivedData/Debug/TestDriverFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,16 +42,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E852D62176DE2800E4CA6A /* TestDriverFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2739C77E2177472700F809C8 /* DLX */ = {
+			isa = PBXGroup;
+			children = (
+				2739C77F2177472700F809C8 /* GridNode.swift */,
+				2739C7802177472700F809C8 /* HeaderNode.swift */,
+				2739C7812177472700F809C8 /* DLX.swift */,
+				2739C7822177472700F809C8 /* RootNode.swift */,
+				2739C7832177472700F809C8 /* Node.swift */,
+			);
+			name = DLX;
+			path = ../../DLX;
+			sourceTree = "<group>";
+		};
 		27E852A72176DC4200E4CA6A = {
 			isa = PBXGroup;
 			children = (
+				2739C77E2177472700F809C8 /* DLX */,
 				27E852B22176DC4200E4CA6A /* TestDriver-OSX */,
 				27E852B12176DC4200E4CA6A /* Products */,
 			);
@@ -60,7 +81,6 @@
 		27E852B22176DC4200E4CA6A /* TestDriver-OSX */ = {
 			isa = PBXGroup;
 			children = (
-				27E852D52176DE2800E4CA6A /* TestDriverFramework.framework */,
 				27E852B32176DC4200E4CA6A /* main.swift */,
 			);
 			path = "TestDriver-OSX";
@@ -123,7 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2739C7862177472700F809C8 /* DLX.swift in Sources */,
+				2739C7852177472700F809C8 /* HeaderNode.swift in Sources */,
+				2739C7872177472700F809C8 /* RootNode.swift in Sources */,
+				2739C7882177472700F809C8 /* Node.swift in Sources */,
 				27E852B42176DC4200E4CA6A /* main.swift in Sources */,
+				2739C7842177472700F809C8 /* GridNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

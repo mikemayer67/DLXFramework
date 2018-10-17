@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TestDriver-OSX/TestDriverFramework/TestDriverFramework.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:TestDriver-OSX/TestDriver-OSX/TestDriver-OSX.xcodeproj">
    </FileRef>
    <FileRef
