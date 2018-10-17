@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestDriver-OSX/TestDriverFramework/TestDriverFramework.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestDriver-OSX/TestDriver-OSX/TestDriver-OSX.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DLX-iOS/DLX-iOS.xcodeproj">
    </FileRef>
    <FileRef
@@ -15,6 +21,21 @@
       </FileRef>
       <FileRef
          location = "group:README.md">
+      </FileRef>
+      <FileRef
+         location = "group:DLX/Node.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DLX/HeaderNode.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DLX/GridNode.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/mike/workbench/DLXFramework/DLX/RootNode.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DLX/DLX.swift">
       </FileRef>
    </Group>
 </Workspace>

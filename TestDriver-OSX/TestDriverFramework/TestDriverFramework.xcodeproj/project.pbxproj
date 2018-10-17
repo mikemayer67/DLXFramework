@@ -7,174 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27C004BE217664370035F1D6 /* DLX_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C004BC217664370035F1D6 /* DLX_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27C0059F217665E10035F1D6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27C0059D217665E10035F1D6 /* README.md */; };
-		27C005A0217665E10035F1D6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 27C0059E217665E10035F1D6 /* LICENSE */; };
-		27E8524C21769D9E00E4CA6A /* HeaderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8524B21769D9E00E4CA6A /* HeaderNode.swift */; };
-		27E852542176A10700E4CA6A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E852532176A10700E4CA6A /* Node.swift */; };
-		27E852582176A11800E4CA6A /* GridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E852572176A11800E4CA6A /* GridNode.swift */; };
-		27E8525C2176BE6F00E4CA6A /* RootNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8525B2176BE6F00E4CA6A /* RootNode.swift */; };
-		27E852602176CFC700E4CA6A /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8525F2176CFC600E4CA6A /* DLX.swift */; };
+		27E852CB2176DCB300E4CA6A /* TestDriverFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E852C92176DCB300E4CA6A /* TestDriverFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E852D32176DDA600E4CA6A /* DLX_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E852D22176DDA600E4CA6A /* DLX_OSX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		27C004B9217664370035F1D6 /* DLX_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLX_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		27C004BC217664370035F1D6 /* DLX_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLX_iOS.h; sourceTree = "<group>"; };
-		27C004BD217664370035F1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27C0059D217665E10035F1D6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		27C0059E217665E10035F1D6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		27E8524B21769D9E00E4CA6A /* HeaderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderNode.swift; path = ../DLX/HeaderNode.swift; sourceTree = "<group>"; };
-		27E852532176A10700E4CA6A /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Node.swift; path = ../DLX/Node.swift; sourceTree = "<group>"; };
-		27E852572176A11800E4CA6A /* GridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GridNode.swift; path = ../DLX/GridNode.swift; sourceTree = "<group>"; };
-		27E8525B2176BE6F00E4CA6A /* RootNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootNode.swift; path = /Users/mike/workbench/DLXFramework/DLX/RootNode.swift; sourceTree = "<absolute>"; };
-		27E8525F2176CFC600E4CA6A /* DLX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../DLX/DLX.swift; sourceTree = "<group>"; };
+		27E852C62176DCB300E4CA6A /* TestDriverFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestDriverFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E852C92176DCB300E4CA6A /* TestDriverFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDriverFramework.h; sourceTree = "<group>"; };
+		27E852CA2176DCB300E4CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E852D22176DDA600E4CA6A /* DLX_OSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLX_OSX.framework; path = ../../DerivedData/Debug/DLX_OSX.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		27C004B6217664370035F1D6 /* Frameworks */ = {
+		27E852C32176DCB300E4CA6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E852D32176DDA600E4CA6A /* DLX_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27C004AF217664370035F1D6 = {
+		27E852BC2176DCB300E4CA6A = {
 			isa = PBXGroup;
 			children = (
-				27C0059C217665D70035F1D6 /* Common */,
-				27C004BB217664370035F1D6 /* DLX-iOS */,
-				27C004BA217664370035F1D6 /* Products */,
+				27E852D22176DDA600E4CA6A /* DLX_OSX.framework */,
+				27E852C82176DCB300E4CA6A /* TestDriverFramework */,
+				27E852C72176DCB300E4CA6A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		27C004BA217664370035F1D6 /* Products */ = {
+		27E852C72176DCB300E4CA6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27C004B9217664370035F1D6 /* DLX_iOS.framework */,
+				27E852C62176DCB300E4CA6A /* TestDriverFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27C004BB217664370035F1D6 /* DLX-iOS */ = {
+		27E852C82176DCB300E4CA6A /* TestDriverFramework */ = {
 			isa = PBXGroup;
 			children = (
-				27C004BC217664370035F1D6 /* DLX_iOS.h */,
-				27C004BD217664370035F1D6 /* Info.plist */,
+				27E852C92176DCB300E4CA6A /* TestDriverFramework.h */,
+				27E852CA2176DCB300E4CA6A /* Info.plist */,
 			);
-			path = "DLX-iOS";
-			sourceTree = "<group>";
-		};
-		27C0059C217665D70035F1D6 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				27C0059E217665E10035F1D6 /* LICENSE */,
-				27C0059D217665E10035F1D6 /* README.md */,
-				27E852532176A10700E4CA6A /* Node.swift */,
-				27E8524B21769D9E00E4CA6A /* HeaderNode.swift */,
-				27E852572176A11800E4CA6A /* GridNode.swift */,
-				27E8525B2176BE6F00E4CA6A /* RootNode.swift */,
-				27E8525F2176CFC600E4CA6A /* DLX.swift */,
-			);
-			name = Common;
+			path = TestDriverFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		27C004B4217664370035F1D6 /* Headers */ = {
+		27E852C12176DCB300E4CA6A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C004BE217664370035F1D6 /* DLX_iOS.h in Headers */,
+				27E852CB2176DCB300E4CA6A /* TestDriverFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		27C004B8217664370035F1D6 /* DLX-iOS */ = {
+		27E852C52176DCB300E4CA6A /* TestDriverFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27C004C1217664370035F1D6 /* Build configuration list for PBXNativeTarget "DLX-iOS" */;
+			buildConfigurationList = 27E852CE2176DCB300E4CA6A /* Build configuration list for PBXNativeTarget "TestDriverFramework" */;
 			buildPhases = (
-				27C004B4217664370035F1D6 /* Headers */,
-				27C004B5217664370035F1D6 /* Sources */,
-				27C004B6217664370035F1D6 /* Frameworks */,
-				27C004B7217664370035F1D6 /* Resources */,
+				27E852C12176DCB300E4CA6A /* Headers */,
+				27E852C22176DCB300E4CA6A /* Sources */,
+				27E852C32176DCB300E4CA6A /* Frameworks */,
+				27E852C42176DCB300E4CA6A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "DLX-iOS";
-			productName = "DLX-iOS";
-			productReference = 27C004B9217664370035F1D6 /* DLX_iOS.framework */;
+			name = TestDriverFramework;
+			productName = TestDriverFramework;
+			productReference = 27E852C62176DCB300E4CA6A /* TestDriverFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		27C004B0217664370035F1D6 /* Project object */ = {
+		27E852BD2176DCB300E4CA6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = VMWishes;
 				TargetAttributes = {
-					27C004B8217664370035F1D6 = {
+					27E852C52176DCB300E4CA6A = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = 27C004B3217664370035F1D6 /* Build configuration list for PBXProject "DLX-iOS" */;
+			buildConfigurationList = 27E852C02176DCB300E4CA6A /* Build configuration list for PBXProject "TestDriverFramework" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 27C004AF217664370035F1D6;
-			productRefGroup = 27C004BA217664370035F1D6 /* Products */;
+			mainGroup = 27E852BC2176DCB300E4CA6A;
+			productRefGroup = 27E852C72176DCB300E4CA6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27C004B8217664370035F1D6 /* DLX-iOS */,
+				27E852C52176DCB300E4CA6A /* TestDriverFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27C004B7217664370035F1D6 /* Resources */ = {
+		27E852C42176DCB300E4CA6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C005A0217665E10035F1D6 /* LICENSE in Resources */,
-				27C0059F217665E10035F1D6 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27C004B5217664370035F1D6 /* Sources */ = {
+		27E852C22176DCB300E4CA6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E8524C21769D9E00E4CA6A /* HeaderNode.swift in Sources */,
-				27E852582176A11800E4CA6A /* GridNode.swift in Sources */,
-				27E852542176A10700E4CA6A /* Node.swift in Sources */,
-				27E8525C2176BE6F00E4CA6A /* RootNode.swift in Sources */,
-				27E852602176CFC700E4CA6A /* DLX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		27C004BF217664370035F1D6 /* Debug */ = {
+		27E852CC2176DCB300E4CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -204,7 +173,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -224,11 +193,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -236,9 +205,10 @@
 			};
 			name = Debug;
 		};
-		27C004C0217664370035F1D6 /* Release */ = {
+		27E852CD2176DCB300E4CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -268,7 +238,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -282,92 +252,95 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		27C004C2217664370035F1D6 /* Debug */ = {
+		27E852CF2176DCB300E4CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 642SNV9NK2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "DLX-iOS/Info.plist";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TestDriverFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vmwishes.DLX-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmwishes.TestDriverFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		27C004C3217664370035F1D6 /* Release */ = {
+		27E852D02176DCB300E4CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 642SNV9NK2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "DLX-iOS/Info.plist";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TestDriverFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vmwishes.DLX-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmwishes.TestDriverFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27C004B3217664370035F1D6 /* Build configuration list for PBXProject "DLX-iOS" */ = {
+		27E852C02176DCB300E4CA6A /* Build configuration list for PBXProject "TestDriverFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				27C004BF217664370035F1D6 /* Debug */,
-				27C004C0217664370035F1D6 /* Release */,
+				27E852CC2176DCB300E4CA6A /* Debug */,
+				27E852CD2176DCB300E4CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27C004C1217664370035F1D6 /* Build configuration list for PBXNativeTarget "DLX-iOS" */ = {
+		27E852CE2176DCB300E4CA6A /* Build configuration list for PBXNativeTarget "TestDriverFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				27C004C2217664370035F1D6 /* Debug */,
-				27C004C3217664370035F1D6 /* Release */,
+				27E852CF2176DCB300E4CA6A /* Debug */,
+				27E852D02176DCB300E4CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 27C004B0217664370035F1D6 /* Project object */;
+	rootObject = 27E852BD2176DCB300E4CA6A /* Project object */;
 }

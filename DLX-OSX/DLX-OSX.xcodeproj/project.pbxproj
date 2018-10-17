@@ -10,6 +10,11 @@
 		27C004A92176640A0035F1D6 /* DLX_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C004A72176640A0035F1D6 /* DLX_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27C0059A217665C40035F1D6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27C00598217665C40035F1D6 /* README.md */; };
 		27C0059B217665C40035F1D6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 27C00599217665C40035F1D6 /* LICENSE */; };
+		27E8524A21769D9300E4CA6A /* HeaderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8524921769D9300E4CA6A /* HeaderNode.swift */; };
+		27E852522176A10400E4CA6A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E852512176A10400E4CA6A /* Node.swift */; };
+		27E852562176A11000E4CA6A /* GridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E852552176A11000E4CA6A /* GridNode.swift */; };
+		27E8525A2176BE6C00E4CA6A /* RootNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E852592176BE6C00E4CA6A /* RootNode.swift */; };
+		27E8525E2176CFC400E4CA6A /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8525D2176CFC400E4CA6A /* DLX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +23,11 @@
 		27C004A82176640A0035F1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27C00598217665C40035F1D6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		27C00599217665C40035F1D6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		27E8524921769D9300E4CA6A /* HeaderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderNode.swift; path = ../DLX/HeaderNode.swift; sourceTree = "<group>"; };
+		27E852512176A10400E4CA6A /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Node.swift; path = ../DLX/Node.swift; sourceTree = "<group>"; };
+		27E852552176A11000E4CA6A /* GridNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridNode.swift; path = ../DLX/GridNode.swift; sourceTree = "<group>"; };
+		27E852592176BE6C00E4CA6A /* RootNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootNode.swift; path = /Users/mike/workbench/DLXFramework/DLX/RootNode.swift; sourceTree = "<absolute>"; };
+		27E8525D2176CFC400E4CA6A /* DLX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../DLX/DLX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,11 @@
 			children = (
 				27C00599217665C40035F1D6 /* LICENSE */,
 				27C00598217665C40035F1D6 /* README.md */,
+				27E852512176A10400E4CA6A /* Node.swift */,
+				27E8524921769D9300E4CA6A /* HeaderNode.swift */,
+				27E852552176A11000E4CA6A /* GridNode.swift */,
+				27E852592176BE6C00E4CA6A /* RootNode.swift */,
+				27E8525D2176CFC400E4CA6A /* DLX.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -146,6 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E8524A21769D9300E4CA6A /* HeaderNode.swift in Sources */,
+				27E852562176A11000E4CA6A /* GridNode.swift in Sources */,
+				27E852522176A10400E4CA6A /* Node.swift in Sources */,
+				27E8525A2176BE6C00E4CA6A /* RootNode.swift in Sources */,
+				27E8525E2176CFC400E4CA6A /* DLX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
