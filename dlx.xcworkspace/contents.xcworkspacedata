@@ -4,12 +4,6 @@
    <FileRef
       location = "group:TestDriver-OSX/TestDriver-OSX/TestDriver-OSX.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:DLX-iOS/DLX-iOS.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:DLX-OSX/DLX-OSX.xcodeproj">
-   </FileRef>
    <Group
       location = "container:"
       name = "DLX Code">
@@ -20,16 +14,16 @@
          location = "group:README.md">
       </FileRef>
       <FileRef
-         location = "group:DLX/Node.swift">
+         location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXNode.swift">
       </FileRef>
       <FileRef
-         location = "group:/Users/mike/workbench/DLXFramework/DLX/ColumnNode.swift">
+         location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXColumnNode.swift">
       </FileRef>
       <FileRef
-         location = "group:DLX/GridNode.swift">
+         location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXGridNode.swift">
       </FileRef>
       <FileRef
-         location = "group:/Users/mike/workbench/DLXFramework/DLX/RootNode.swift">
+         location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXRootNode.swift">
       </FileRef>
       <FileRef
          location = "group:DLX/DLX.swift">

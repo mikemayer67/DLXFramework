@@ -7,14 +7,14 @@
 
 import Foundation
 
-class Node
+class DLXNode
 {
-  var left  : Node?
-  var right : Node?
-  var up    : Node?
-  var down  : Node?
+  var left  : DLXNode?
+  var right : DLXNode?
+  var up    : DLXNode?
+  var down  : DLXNode?
   
-  func insert(after x:Node)
+  func insert(after x:DLXNode)
   {
     assert( self.left == nil, "Attempted to reinsert linked node")
     assert( self.right == nil, "Attempted to reinsert linked node")
@@ -25,7 +25,7 @@ class Node
     self.right!.left = self
   }
   
-  func insert(before x:Node)
+  func insert(before x:DLXNode)
   {
     assert( self.left == nil, "Attempted to reinsert linked node")
     assert( self.right == nil, "Attempted to reinsert linked node")
@@ -36,7 +36,7 @@ class Node
     self.right!.left = self
   }
   
-  func insert(below x:Node)
+  func insert(below x:DLXNode)
   {
     assert( self.up == nil, "Attempted to reinsert linked node")
     assert( self.down == nil, "Attempted to reinsert linked node")
@@ -47,7 +47,7 @@ class Node
     self.down!.up = self
   }
   
-  func insert(above x:Node)
+  func insert(above x:DLXNode)
   {
     assert( self.up == nil, "Attempted to reinsert linked node")
     assert( self.down == nil, "Attempted to reinsert linked node")

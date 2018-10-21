@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RootNode : Node
+class DLXRootNode : DLXNode
 {
   func isEmpty() -> Bool
   {
@@ -15,7 +15,7 @@ class RootNode : Node
     return (r == nil) || (r === self)
   }
   
-  func add(_ x:ColumnNode)
+  func add(_ x:DLXColumnNode)
   {
     x.insert(before:self) // this inserts self at the END of the list of columns
   }
@@ -27,10 +27,10 @@ class RootNode : Node
     var c = self.right!
     while c !== self
     {
-      assert( c is ColumnNode, "Root node row linkage can only contain ColumnNodes" )
+      assert( c is DLXColumnNode, "Root node row linkage can only contain ColumnNodes" )
       assert( c.right != nil,  "Incomplete root row linkage encountered" )
 
-      let h = c as! ColumnNode
+      let h = c as! DLXColumnNode
       if h.rows == 0 { return true }
       c = c.right!
     }

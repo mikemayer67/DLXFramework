@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ColumnNode : Node
+class DLXColumnNode : DLXNode
 {
   var rows  = 0
   var id = 0
@@ -20,7 +20,7 @@ class ColumnNode : Node
     super.init()
   }
   
-  func add(_ node:GridNode)
+  func add(_ node:DLXGridNode)
   {
     node.insert(above:self) // this inserts node at bottom of the column
     self.rows += 1

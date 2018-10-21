@@ -7,12 +7,12 @@
 
 import Foundation
 
-class GridNode : Node
+class DLXGridNode : DLXNode
 {
   let row : Int!
-  let col : ColumnNode!
+  let col : DLXColumnNode!
   
-  init(row:Int, in col:ColumnNode)
+  init(row:Int, in col:DLXColumnNode)
   {
     self.row = row
     self.col = col

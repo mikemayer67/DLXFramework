@@ -9,12 +9,12 @@ import Foundation
 
 public class DLX
 {
-  let dlx = RootNode()
+  let dlx = DLXRootNode()
   
-  var columns = Dictionary<Int,ColumnNode>()
-  var rows    = Dictionary<Int,GridNode>()
+  var columns = Dictionary<Int,DLXColumnNode>()
+  var rows    = Dictionary<Int,DLXGridNode>()
   
-  let numColumns   : Int!
+  let numColumns : Int!
   
   public private(set) static var error : String?
   
@@ -40,14 +40,14 @@ public class DLX
     }
     
     for j in a...b {
-      let col = ColumnNode(j)
+      let col = DLXColumnNode(j)
       columns[j] = col
       dlx.add(col)
     }
     
     for i in 0..<A.count {
       for colID in A[i] {
-        let node = GridNode(row: i, in: columns[colID]!)
+        let node = DLXGridNode(row: i, in: columns[colID]!)
         if let h = rows[i] {
           node.insert(before:h)
         } else {
@@ -65,15 +65,15 @@ public class DLX
 
     var columnString = "Columns:"
     
-    var c = dlx.right as? ColumnNode
+    var c = dlx.right as? DLXColumnNode
     while c != nil {
-      var r = c!.down as? GridNode
+      var r = c!.down as? DLXGridNode
       while r != nil {
         curRows.insert(r!.row)
-        r = r!.down as? GridNode
+        r = r!.down as? DLXGridNode
       }
       columnString.append( String(format: " %@(%d)", c!.label, c!.rows) )
-      c = c!.right as? ColumnNode
+      c = c!.right as? DLXColumnNode
     }
 
     print(columnString)
@@ -89,7 +89,7 @@ public class DLX
         repeat
         {
           rowString.append( " " + cur.col.label )
-          cur = cur.right as! GridNode
+          cur = cur.right as! DLXGridNode
         } while cur !== rows[i]
 
         print(rowString)
