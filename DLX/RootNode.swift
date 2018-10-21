@@ -15,16 +15,23 @@ class RootNode : Node
     return (r == nil) || (r === self)
   }
   
+  func add(_ x:ColumnNode)
+  {
+    x.insert(before:self) // this inserts self at the END of the list of columns
+  }
+  
   func hasEmptyColumn() -> Bool
   {
     if isEmpty() { return false }
     
     var c = self.right!
-    while c is HeaderNode
+    while c !== self
     {
-      let h = c as! HeaderNode
-      if h.size == 0 { return true }
-      assert( c.right != nil, "Incomplete linkage encountered" )
+      assert( c is ColumnNode, "Root node row linkage can only contain ColumnNodes" )
+      assert( c.right != nil,  "Incomplete root row linkage encountered" )
+
+      let h = c as! ColumnNode
+      if h.rows == 0 { return true }
       c = c.right!
     }
     return false

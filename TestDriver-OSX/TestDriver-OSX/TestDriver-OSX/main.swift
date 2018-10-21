@@ -20,4 +20,4 @@ guard dlx != nil else
   exit(1)
 }
 
-print("Good bye!")
+dlx!.dump()

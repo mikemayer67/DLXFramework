@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272B810D21781D3F00BEF1FB /* ColumnNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272B810C21781D3F00BEF1FB /* ColumnNode.swift */; };
 		2739C7842177472700F809C8 /* GridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C77F2177472700F809C8 /* GridNode.swift */; };
-		2739C7852177472700F809C8 /* HeaderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7802177472700F809C8 /* HeaderNode.swift */; };
 		2739C7862177472700F809C8 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7812177472700F809C8 /* DLX.swift */; };
 		2739C7872177472700F809C8 /* RootNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7822177472700F809C8 /* RootNode.swift */; };
 		2739C7882177472700F809C8 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739C7832177472700F809C8 /* Node.swift */; };
@@ -28,8 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		272B810C21781D3F00BEF1FB /* ColumnNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColumnNode.swift; path = /Users/mike/workbench/DLXFramework/DLX/ColumnNode.swift; sourceTree = "<absolute>"; };
 		2739C77F2177472700F809C8 /* GridNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridNode.swift; sourceTree = "<group>"; };
-		2739C7802177472700F809C8 /* HeaderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderNode.swift; sourceTree = "<group>"; };
 		2739C7812177472700F809C8 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLX.swift; sourceTree = "<group>"; };
 		2739C7822177472700F809C8 /* RootNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNode.swift; sourceTree = "<group>"; };
 		2739C7832177472700F809C8 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -51,11 +51,11 @@
 		2739C77E2177472700F809C8 /* DLX */ = {
 			isa = PBXGroup;
 			children = (
-				2739C77F2177472700F809C8 /* GridNode.swift */,
-				2739C7802177472700F809C8 /* HeaderNode.swift */,
 				2739C7812177472700F809C8 /* DLX.swift */,
-				2739C7822177472700F809C8 /* RootNode.swift */,
 				2739C7832177472700F809C8 /* Node.swift */,
+				272B810C21781D3F00BEF1FB /* ColumnNode.swift */,
+				2739C77F2177472700F809C8 /* GridNode.swift */,
+				2739C7822177472700F809C8 /* RootNode.swift */,
 			);
 			name = DLX;
 			path = ../../DLX;
@@ -144,9 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2739C7862177472700F809C8 /* DLX.swift in Sources */,
-				2739C7852177472700F809C8 /* HeaderNode.swift in Sources */,
 				2739C7872177472700F809C8 /* RootNode.swift in Sources */,
 				2739C7882177472700F809C8 /* Node.swift in Sources */,
+				272B810D21781D3F00BEF1FB /* ColumnNode.swift in Sources */,
 				27E852B42176DC4200E4CA6A /* main.swift in Sources */,
 				2739C7842177472700F809C8 /* GridNode.swift in Sources */,
 			);

@@ -23,7 +23,7 @@
          location = "group:DLX/Node.swift">
       </FileRef>
       <FileRef
-         location = "group:DLX/HeaderNode.swift">
+         location = "group:/Users/mike/workbench/DLXFramework/DLX/ColumnNode.swift">
       </FileRef>
       <FileRef
          location = "group:DLX/GridNode.swift">
