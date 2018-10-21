@@ -17,15 +17,6 @@
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXNode.swift">
       </FileRef>
       <FileRef
-         location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXColumnNode.swift">
-      </FileRef>
-      <FileRef
-         location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXGridNode.swift">
-      </FileRef>
-      <FileRef
-         location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXRootNode.swift">
-      </FileRef>
-      <FileRef
          location = "group:DLX/DLX.swift">
       </FileRef>
    </Group>

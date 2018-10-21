@@ -8,16 +8,21 @@
 
 import Foundation
 
-print("Hello, World!")
-
 let demo = [[1,4,7],[1,4],[4,5,7],[3,5,6],[2,3,6,7],[2,7]]
 
-let dlx = DLX(demo)
-
-guard dlx != nil else
+do
 {
-  print("Error: " + (DLX.error ?? "Unknown") )
-  exit(1)
+  let dlx = try DLX(demo)
+  
+  dlx.dump()
 }
-
-dlx!.dump()
+catch DLXError.InputMatrixEmpty
+{
+  print("Matrix used to initialize DLX cannot be empty")
+}
+catch let DLXError.InputMatrixMissingColumns(min:a, max:b, count:n)
+{
+  print("Matrix used to initialize DLX must cover all columns")
+  print(String(format:"  Matrix contains indices spanning %d columns (from %d to %d)", 1+b-a, a, b))
+  print(String(format:"  ... but contains only %d unique values", n))
+}
