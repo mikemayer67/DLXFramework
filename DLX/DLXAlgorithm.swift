@@ -23,18 +23,15 @@ class DLXAlgorithm : Operation
       if self.isCancelled
       {
         NotificationCenter.default.post(name: .DLXAlgorithmCanceled, object: self.dlx)
-        print("Canceled")
         return
       }
       
-      let delay = Double.random(in:1.0...5.0)
+      let delay = Double.random(in:0.5...3.0)
       print("Time to next solution: ", delay.description)
       Thread.sleep(forTimeInterval: delay)
-      print("Solution found")
       
       dlx.addSolution(Array(1...i))
     }
-    print("Complete")
     
     dlx.isComplete = true
     NotificationCenter.default.post(name: .DLXAlgorithmComplete, object: self.dlx)

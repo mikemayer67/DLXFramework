@@ -25,7 +25,7 @@ class ViewController: NSViewController {
     "uncovered" : [[Int](), [Int](), [Int]()]
   ]
   
-  var solutionCount = 0
+  var solutionsDisplayed = 0
   
   var curDataSetTitle : String?
   
@@ -49,7 +49,7 @@ class ViewController: NSViewController {
     solutionCountLabel.stringValue = ""
     statusLabel.stringValue = ""
     
-    solutionCount = 0
+    solutionsDisplayed = 0
     
     if let ts = loggingTextView.textStorage {
       ts.replaceCharacters(in: NSMakeRange(0, ts.length), with: "")
@@ -139,10 +139,15 @@ class ViewController: NSViewController {
     switch notification.name
     {
     case Notification.Name.DLXSolutionFound:
-//      solutionsCountLabel.stringValue = dlx?.solutions.count.description ?? ""
-      log("Solution Found")
-      solutionCount += 1
-      solutionCountLabel.stringValue = solutionCount.description
+      if let curSolutions = dlx?.solutions {
+        solutionCountLabel.stringValue = curSolutions.count.description
+        while solutionsDisplayed < curSolutions.count {
+          log(curSolutions[solutionsDisplayed].description)
+          solutionsDisplayed += 1
+        }
+      } else {
+        solutionCountLabel.stringValue = ""
+      }
     case Notification.Name.DLXAlgorithmCanceled:
       statusLabel.stringValue = "Canceled"
       logInfo("DLX Algorithm was canceled",

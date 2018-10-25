@@ -43,14 +43,19 @@ class DLX
   private var solutions_ = [[Int]]() // actual storage...
   
   var solutions : [[Int]] {
-    return dataQueue.sync { return solutions_ }
+    return dataQueue.sync {
+      return solutions_
+      
+    }
   }
   
   func addSolution(_ solution : [Int])
   {
     dataQueue.sync { [weak self] in
       solutions_.append(solution)
-      NotificationCenter.default.post(name: .DLXSolutionFound, object: self)
+      DispatchQueue.main.async {
+        NotificationCenter.default.post(name: .DLXSolutionFound, object: self)
+      }
     }
   }
   
