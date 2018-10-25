@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2738B097217CEBBD00D25694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B096217CEBBD00D25694 /* AppDelegate.swift */; };
+		2738B099217CEBBD00D25694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B098217CEBBD00D25694 /* ViewController.swift */; };
+		2738B09B217CEBBE00D25694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2738B09A217CEBBE00D25694 /* Assets.xcassets */; };
+		2738B09E217CEBBE00D25694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2738B09C217CEBBE00D25694 /* Main.storyboard */; };
+		2738B0AA217CEC1100D25694 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A7217CEC1100D25694 /* DLX.swift */; };
+		2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A9217CEC1100D25694 /* DLXNode.swift */; };
+		27D65211217EE9FD00463274 /* DLXAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D65210217EE9FD00463274 /* DLXAlgorithm.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2738B093217CEBBD00D25694 /* DLXTestDriver-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DLXTestDriver-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2738B096217CEBBD00D25694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2738B098217CEBBD00D25694 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2738B09A217CEBBE00D25694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2738B09D217CEBBE00D25694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2738B09F217CEBBE00D25694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2738B0A0217CEBBE00D25694 /* DLXTestDriver_OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DLXTestDriver_OSX.entitlements; sourceTree = "<group>"; };
+		2738B0A7217CEC1100D25694 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../../DLX/DLX.swift; sourceTree = "<group>"; };
+		2738B0A9217CEC1100D25694 /* DLXNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXNode.swift; path = ../../DLX/DLXNode.swift; sourceTree = "<group>"; };
+		27D65210217EE9FD00463274 /* DLXAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLXAlgorithm.swift; path = /Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2738B090217CEBBD00D25694 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2738B08A217CEBBD00D25694 = {
+			isa = PBXGroup;
+			children = (
+				2738B0A6217CEBF900D25694 /* Common Code */,
+				2738B095217CEBBD00D25694 /* DLXTestDriver-OSX */,
+				2738B094217CEBBD00D25694 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2738B094217CEBBD00D25694 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2738B093217CEBBD00D25694 /* DLXTestDriver-OSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2738B095217CEBBD00D25694 /* DLXTestDriver-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				2738B096217CEBBD00D25694 /* AppDelegate.swift */,
+				2738B098217CEBBD00D25694 /* ViewController.swift */,
+				2738B09A217CEBBE00D25694 /* Assets.xcassets */,
+				2738B09C217CEBBE00D25694 /* Main.storyboard */,
+				2738B09F217CEBBE00D25694 /* Info.plist */,
+				2738B0A0217CEBBE00D25694 /* DLXTestDriver_OSX.entitlements */,
+			);
+			path = "DLXTestDriver-OSX";
+			sourceTree = "<group>";
+		};
+		2738B0A6217CEBF900D25694 /* Common Code */ = {
+			isa = PBXGroup;
+			children = (
+				2738B0A9217CEC1100D25694 /* DLXNode.swift */,
+				2738B0A7217CEC1100D25694 /* DLX.swift */,
+				27D65210217EE9FD00463274 /* DLXAlgorithm.swift */,
+			);
+			name = "Common Code";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2738B092217CEBBD00D25694 /* DLXTestDriver-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2738B0A3217CEBBE00D25694 /* Build configuration list for PBXNativeTarget "DLXTestDriver-OSX" */;
+			buildPhases = (
+				2738B08F217CEBBD00D25694 /* Sources */,
+				2738B090217CEBBD00D25694 /* Frameworks */,
+				2738B091217CEBBD00D25694 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DLXTestDriver-OSX";
+			productName = "DLXTestDriver-OSX";
+			productReference = 2738B093217CEBBD00D25694 /* DLXTestDriver-OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2738B08B217CEBBD00D25694 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = VMWishes;
+				TargetAttributes = {
+					2738B092217CEBBD00D25694 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 2738B08E217CEBBD00D25694 /* Build configuration list for PBXProject "DLXTestDriver-OSX" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2738B08A217CEBBD00D25694;
+			productRefGroup = 2738B094217CEBBD00D25694 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2738B092217CEBBD00D25694 /* DLXTestDriver-OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2738B091217CEBBD00D25694 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2738B09B217CEBBE00D25694 /* Assets.xcassets in Resources */,
+				2738B09E217CEBBE00D25694 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2738B08F217CEBBD00D25694 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D65211217EE9FD00463274 /* DLXAlgorithm.swift in Sources */,
+				2738B0AA217CEC1100D25694 /* DLX.swift in Sources */,
+				2738B099217CEBBD00D25694 /* ViewController.swift in Sources */,
+				2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */,
+				2738B097217CEBBD00D25694 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2738B09C217CEBBE00D25694 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2738B09D217CEBBE00D25694 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2738B0A1217CEBBE00D25694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2738B0A2217CEBBE00D25694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2738B0A4217CEBBE00D25694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DLXTestDriver-OSX/DLXTestDriver_OSX.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 642SNV9NK2;
+				INFOPLIST_FILE = "DLXTestDriver-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vmwishes.DLXTestDriver-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		2738B0A5217CEBBE00D25694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DLXTestDriver-OSX/DLXTestDriver_OSX.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 642SNV9NK2;
+				INFOPLIST_FILE = "DLXTestDriver-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vmwishes.DLXTestDriver-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2738B08E217CEBBD00D25694 /* Build configuration list for PBXProject "DLXTestDriver-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2738B0A1217CEBBE00D25694 /* Debug */,
+				2738B0A2217CEBBE00D25694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2738B0A3217CEBBE00D25694 /* Build configuration list for PBXNativeTarget "DLXTestDriver-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2738B0A4217CEBBE00D25694 /* Debug */,
+				2738B0A5217CEBBE00D25694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2738B08B217CEBBD00D25694 /* Project object */;
+}
