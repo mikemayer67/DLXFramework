@@ -21,11 +21,15 @@ class ViewController: NSViewController {
   
   let dataSets : Dictionary<String,[[Int]]> = [
     "demo 1" : [[1,4,7],[1,4],[4,5,7],[3,5,6],[2,3,6,7],[7,2]],
+    "demo 2" : [[1,4,7],[1,4],[4,5,7],[3,5,6],[2,3,6,7],[7,2],[1,3,4],[5,6]],
     "empty" : [[Int]](),
-    "uncovered" : [[Int](), [Int](), [Int]()]
+    "uncovered" : [[Int](), [Int](), [Int]()],
+    "unique column" : [[1,4,7],[1,2,9],[1,4],[4,5,7],[8],[3,5,6],[2,3,6,7],[7,2]],
+    "sudoku 4" : sudoku4.grid()
   ]
   
   var solutionsDisplayed = 0
+  let maxSolutionsToDisplay = 500
   
   var curDataSetTitle : String?
   
@@ -33,15 +37,15 @@ class ViewController: NSViewController {
     super.viewDidLoad()
     
     dataSetPopup.removeAllItems()
-    dataSetPopup.addItems(withTitles: Array(dataSets.keys))
+    dataSetPopup.addItems(withTitles: Array(dataSets.keys.sorted()))
     
     resetFields()
     handleDataSet(dataSetPopup)
     updateAll()
     
-    NotificationCenter.default.addObserver(forName:.DLXSolutionFound,     object:nil, queue:OperationQueue.main, using:handleNotification)
-    NotificationCenter.default.addObserver(forName:.DLXAlgorithmCanceled, object:nil, queue:OperationQueue.main, using:handleNotification)
-    NotificationCenter.default.addObserver(forName:.DLXAlgorithmComplete, object:nil, queue:OperationQueue.main, using:handleNotification)
+    NotificationCenter.default.addObserver(forName:.DLXSolutionFound,     object:nil, queue:OperationQueue.main, using:handleNewSolutionNotification)
+    NotificationCenter.default.addObserver(forName:.DLXAlgorithmCanceled, object:nil, queue:OperationQueue.main, using:handleCanceledNotification)
+    NotificationCenter.default.addObserver(forName:.DLXAlgorithmComplete, object:nil, queue:OperationQueue.main, using:handleCompletedNotification)
   }
   
   func resetFields()
@@ -86,6 +90,7 @@ class ViewController: NSViewController {
     
     isRunning = true
     resetFields()
+    solutionCountLabel.stringValue = "0"
     updateAll()
     
     dlx!.solve()
@@ -107,7 +112,7 @@ class ViewController: NSViewController {
   @IBAction func handleDataSet(_ sender: NSPopUpButton)
   {
     if let key = sender.selectedItem?.title {
-      if key == curDataSetTitle { logError("Reselected current data set "+key); return }
+      if key == curDataSetTitle { return }
       
       resetFields()
       curDataSetTitle = nil
@@ -134,34 +139,59 @@ class ViewController: NSViewController {
     updateAll()
   }
   
-  @objc func handleNotification(_ notification:Notification)
+  @objc func handleNewSolutionNotification(_ notification:Notification)
   {
-    switch notification.name
-    {
-    case Notification.Name.DLXSolutionFound:
-      if let curSolutions = dlx?.solutions {
-        solutionCountLabel.stringValue = curSolutions.count.description
-        while solutionsDisplayed < curSolutions.count {
-          log(curSolutions[solutionsDisplayed].description)
-          solutionsDisplayed += 1
-        }
-      } else {
-        solutionCountLabel.stringValue = ""
-      }
-    case Notification.Name.DLXAlgorithmCanceled:
-      statusLabel.stringValue = "Canceled"
-      logInfo("DLX Algorithm was canceled",
-              color:NSColor(red:0.5, green:0.0, blue:0.0, alpha: 1.0))
-      isRunning = false
-    case Notification.Name.DLXAlgorithmComplete:
-      statusLabel.stringValue = "Completed"
-      logInfo("DLX Algorithm completed")
-      isRunning = false
-    default:
-      return
+    if let curCount = dlx?.solutions.count {
+      solutionCountLabel.stringValue = curCount.description
+    } else {
+      solutionCountLabel.stringValue = ""
     }
-    
-     updateAll()
+  }
+  
+  @objc func handleCanceledNotification(_ notification:Notification)
+  {
+    statusLabel.stringValue = "Canceled"
+    if let S = dlx?.solutions {
+      while solutionsDisplayed < S.count, solutionsDisplayed < maxSolutionsToDisplay
+      {
+        log(S[solutionsDisplayed].description)
+        solutionsDisplayed += 1
+      }
+      if solutionsDisplayed == maxSolutionsToDisplay {
+        log("... only first " + maxSolutionsToDisplay.description + " solutions displayed")
+      }
+      logInfo("DLX Algorithm was canceled after " + S.count.description + " solution" + (S.count>1 ? "s" : ""),
+              color:NSColor(red:0.5, green:0.0, blue:0.0, alpha: 1.0))
+    }
+    else
+    {
+      logInfo("DLX Algorithm was canceled with no solutions",
+              color:NSColor(red:0.5, green:0.0, blue:0.0, alpha: 1.0))
+    }
+    isRunning = false
+    updateAll()
+  }
+  
+  @objc func handleCompletedNotification(_ notification:Notification)
+  {
+    statusLabel.stringValue = "Completed"
+    if let S = dlx?.solutions {
+      while solutionsDisplayed < S.count, solutionsDisplayed < maxSolutionsToDisplay
+      {
+        log(S[solutionsDisplayed].description)
+        solutionsDisplayed += 1
+      }
+      if solutionsDisplayed == maxSolutionsToDisplay {
+        log("... only first " + maxSolutionsToDisplay.description + " solutions displayed")
+      }
+      logInfo("DLX Algorithm completed after " + S.count.description + " solution" + (S.count>1 ? "s" : ""))
+    }
+    else
+    {
+      logInfo("DLX Algorithm completed with no solutions")
+    }
+    isRunning = false
+    updateAll()
   }
   
   func logException(_ msg:String)

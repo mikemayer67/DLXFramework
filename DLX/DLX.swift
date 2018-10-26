@@ -20,9 +20,27 @@ extension Notification.Name {
   static let DLXAlgorithmComplete  = Notification.Name("DLXAlgorithmComplete")
 }
 
+class RC: Hashable
+{
+  let row : Int
+  let col : Int
+  
+  init(_ row:Int, _ col:Int) { self.row = row; self.col = col; }
+  
+  static func == (lhs: RC, rhs: RC) -> Bool {
+    return (lhs.row == rhs.row) && (lhs.col == rhs.col)
+  }
+  
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(row)
+    hasher.combine(col)
+  }
+}
+
 class DLX
 {
   let root = DLXRootNode()
+  let debug = false
   
   // Finding solutions to a DLX problem could very easily take more time
   //   than would be acceptable in anything other than a command line tool.
@@ -43,10 +61,7 @@ class DLX
   private var solutions_ = [[Int]]() // actual storage...
   
   var solutions : [[Int]] {
-    return dataQueue.sync {
-      return solutions_
-      
-    }
+    return dataQueue.sync { return solutions_ }
   }
   
   func addSolution(_ solution : [Int])
@@ -91,9 +106,9 @@ class DLX
     }
     
     if columns.keys.isEmpty { throw DLXError.InputNoCoverage }
-    
-    columns.forEach { (id: Int, col: DLXColumnNode) in
-      col.insert(before: root) // adds node to END of the column header row
+        
+    columns.keys.sorted().forEach { (id: Int) in
+      columns[id]!.insert(before: root) // adds node to END of the column header row
     }
   }
   
@@ -132,5 +147,40 @@ class DLX
   {
     if isComplete { return }
     solverQueue.cancelAllOperations()
+  }
+  
+  func log(_ label:String)
+  {
+    guard self.debug else { return }
+    
+    print()
+    print(label)
+    print("  " + root.logEntry)
+    print()
+    
+    var cells = Dictionary<RC,DLXGridNode>()
+    
+    var c = root.right as? DLXColumnNode
+    while c != nil {
+      print( "  " + c!.logEntry)
+      
+      var r = c!.down as? DLXGridNode
+      while r != nil {
+        cells[ RC(r!.row, r!.col.col) ] = r!
+        r = r!.down as? DLXGridNode
+      }
+      
+      c = c!.right as? DLXColumnNode
+    }
+    
+    let keys = cells.keys.sorted { (a:RC,b:RC) in
+      return ( a.row == b.row ? a.col < b.col : a.row < b.row )
+    }
+    
+    print()
+    for key in keys
+    {
+      print( "  " + cells[key]!.logEntry)
+    }
   }
 }

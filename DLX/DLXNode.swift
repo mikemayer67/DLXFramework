@@ -73,6 +73,23 @@ class DLXNode
     self.left.right = self
     self.right.left = self
   }
+  
+  var coverage : String
+  {
+    let L = ( left === self ? "X" : "." )
+    let R = ( right === self ? "X" : "." )
+    let U = ( up === self ? "X" : "." )
+    let D = ( down === self ? "X" : "." )
+    return ":" + L + R + U + D
+  }
+  
+  var id : String { return "" }
+  var logEntry : String
+  {
+    return String(format:"%@%@  left:%@  right:%@  up:%@  down:%@",
+                  self.id, self.coverage,
+                  self.left.id, self.right.id, self.up.id, self.down.id)
+  }
 }
 
 class DLXRootNode : DLXNode
@@ -96,18 +113,34 @@ class DLXRootNode : DLXNode
     }
     return rval
   }
+  
+  func pickColumn() -> DLXColumnNode?
+  {
+    var c = self.right as? DLXColumnNode
+    
+    var j = c?.right as? DLXColumnNode
+    while j != nil
+    {
+      if( j!.rows < c!.rows ) { c = j }
+      j = j!.right as? DLXColumnNode
+    }
+    
+    return c;
+  }
+  
+  override var id : String { return " root"}
 }
 
 class DLXColumnNode : DLXNode
 {
-  var id    = 0
-  var rows  = 0
+  var col  = 0
+  var rows = 0
   
-  var string : String { return String(format:" %d(%d)",id,rows) }
+  var string : String { return String(format:" %d(%d)",col,rows) }
   
-  init(_ id:Int)
+  init(_ col:Int)
   {
-    self.id = id
+    self.col = col
     super.init()
   }
   
@@ -119,8 +152,8 @@ class DLXColumnNode : DLXNode
   
   func cover()
   {
-    self.left.right = self.left
-    self.right.left = self.right
+    self.left.right = self.right
+    self.right.left = self.left
     
     var i = self.down as? DLXGridNode
     while i != nil
@@ -145,8 +178,8 @@ class DLXColumnNode : DLXNode
       var j = i!.left as! DLXGridNode
       while j !== i
       {
-        j.down.up = j.up
-        j.up.down = j.down
+        j.down.up = j
+        j.up.down = j
         j.col.rows += 1
         j = j.left as! DLXGridNode
       }
@@ -157,6 +190,7 @@ class DLXColumnNode : DLXNode
     self.left.right = self
   }
   
+  override var id : String { return "C" + col.description + "[" + rows.description + "]" }
 }
 
 class DLXGridNode : DLXNode
@@ -173,4 +207,6 @@ class DLXGridNode : DLXNode
     
     col.add(row:self)
   }
+  
+  override var id : String { return "(" + row.description + "," + col.col.description + ")" }
 }

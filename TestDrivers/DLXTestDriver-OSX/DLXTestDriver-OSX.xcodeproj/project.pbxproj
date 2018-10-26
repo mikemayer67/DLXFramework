@@ -14,6 +14,7 @@
 		2738B0AA217CEC1100D25694 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A7217CEC1100D25694 /* DLX.swift */; };
 		2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A9217CEC1100D25694 /* DLXNode.swift */; };
 		27D65211217EE9FD00463274 /* DLXAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D65210217EE9FD00463274 /* DLXAlgorithm.swift */; };
+		27FD051421837AB800B5F92E /* sudoku4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD051321837AB800B5F92E /* sudoku4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2738B0A7217CEC1100D25694 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../../DLX/DLX.swift; sourceTree = "<group>"; };
 		2738B0A9217CEC1100D25694 /* DLXNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXNode.swift; path = ../../DLX/DLXNode.swift; sourceTree = "<group>"; };
 		27D65210217EE9FD00463274 /* DLXAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLXAlgorithm.swift; path = /Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift; sourceTree = "<absolute>"; };
+		27FD051321837AB800B5F92E /* sudoku4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sudoku4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				2738B09C217CEBBE00D25694 /* Main.storyboard */,
 				2738B09F217CEBBE00D25694 /* Info.plist */,
 				2738B0A0217CEBBE00D25694 /* DLXTestDriver_OSX.entitlements */,
+				27FD051321837AB800B5F92E /* sudoku4.swift */,
 			);
 			path = "DLXTestDriver-OSX";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D65211217EE9FD00463274 /* DLXAlgorithm.swift in Sources */,
+				27FD051421837AB800B5F92E /* sudoku4.swift in Sources */,
 				2738B0AA217CEC1100D25694 /* DLX.swift in Sources */,
 				2738B099217CEBBD00D25694 /* ViewController.swift in Sources */,
 				2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */,
