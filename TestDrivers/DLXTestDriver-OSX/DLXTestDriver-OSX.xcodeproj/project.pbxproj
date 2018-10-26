@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2709B0272183BA4A004A6125 /* DLXGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709B0252183BA4A004A6125 /* DLXGridNode.swift */; };
+		2709B0282183BA4A004A6125 /* DLXColumnNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709B0262183BA4A004A6125 /* DLXColumnNode.swift */; };
 		2738B097217CEBBD00D25694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B096217CEBBD00D25694 /* AppDelegate.swift */; };
 		2738B099217CEBBD00D25694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B098217CEBBD00D25694 /* ViewController.swift */; };
 		2738B09B217CEBBE00D25694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2738B09A217CEBBE00D25694 /* Assets.xcassets */; };
 		2738B09E217CEBBE00D25694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2738B09C217CEBBE00D25694 /* Main.storyboard */; };
 		2738B0AA217CEC1100D25694 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A7217CEC1100D25694 /* DLX.swift */; };
 		2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A9217CEC1100D25694 /* DLXNode.swift */; };
-		2767837D2183AE5F00E2564E /* DLXColumnNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767837B2183AE5F00E2564E /* DLXColumnNode.swift */; };
-		2767837E2183AE5F00E2564E /* DLXGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767837C2183AE5F00E2564E /* DLXGridNode.swift */; };
 		27D65211217EE9FD00463274 /* DLXAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D65210217EE9FD00463274 /* DLXAlgorithm.swift */; };
 		27FD051421837AB800B5F92E /* sudoku4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD051321837AB800B5F92E /* sudoku4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2709B0252183BA4A004A6125 /* DLXGridNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXGridNode.swift; path = ../../DLX/DLXGridNode.swift; sourceTree = "<group>"; };
+		2709B0262183BA4A004A6125 /* DLXColumnNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXColumnNode.swift; path = ../../DLX/DLXColumnNode.swift; sourceTree = "<group>"; };
 		2738B093217CEBBD00D25694 /* DLXTestDriver-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DLXTestDriver-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2738B096217CEBBD00D25694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2738B098217CEBBD00D25694 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,8 +31,6 @@
 		2738B0A0217CEBBE00D25694 /* DLXTestDriver_OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DLXTestDriver_OSX.entitlements; sourceTree = "<group>"; };
 		2738B0A7217CEC1100D25694 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../../DLX/DLX.swift; sourceTree = "<group>"; };
 		2738B0A9217CEC1100D25694 /* DLXNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXNode.swift; path = ../../DLX/DLXNode.swift; sourceTree = "<group>"; };
-		2767837B2183AE5F00E2564E /* DLXColumnNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLXColumnNode.swift; path = ../../DLXColumnNode.swift; sourceTree = "<group>"; };
-		2767837C2183AE5F00E2564E /* DLXGridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLXGridNode.swift; path = ../../DLXGridNode.swift; sourceTree = "<group>"; };
 		27D65210217EE9FD00463274 /* DLXAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLXAlgorithm.swift; path = /Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift; sourceTree = "<absolute>"; };
 		27FD051321837AB800B5F92E /* sudoku4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sudoku4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +80,8 @@
 		2738B0A6217CEBF900D25694 /* Common Code */ = {
 			isa = PBXGroup;
 			children = (
-				2767837B2183AE5F00E2564E /* DLXColumnNode.swift */,
-				2767837C2183AE5F00E2564E /* DLXGridNode.swift */,
+				2709B0262183BA4A004A6125 /* DLXColumnNode.swift */,
+				2709B0252183BA4A004A6125 /* DLXGridNode.swift */,
 				2738B0A9217CEC1100D25694 /* DLXNode.swift */,
 				2738B0A7217CEC1100D25694 /* DLX.swift */,
 				27D65210217EE9FD00463274 /* DLXAlgorithm.swift */,
@@ -159,14 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2767837E2183AE5F00E2564E /* DLXGridNode.swift in Sources */,
 				27D65211217EE9FD00463274 /* DLXAlgorithm.swift in Sources */,
 				27FD051421837AB800B5F92E /* sudoku4.swift in Sources */,
+				2709B0282183BA4A004A6125 /* DLXColumnNode.swift in Sources */,
 				2738B0AA217CEC1100D25694 /* DLX.swift in Sources */,
+				2709B0272183BA4A004A6125 /* DLXGridNode.swift in Sources */,
 				2738B099217CEBBD00D25694 /* ViewController.swift in Sources */,
 				2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */,
 				2738B097217CEBBD00D25694 /* AppDelegate.swift in Sources */,
-				2767837D2183AE5F00E2564E /* DLXColumnNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

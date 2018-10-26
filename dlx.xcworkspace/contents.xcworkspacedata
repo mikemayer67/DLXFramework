@@ -8,6 +8,12 @@
       location = "container:"
       name = "DLX Code">
       <FileRef
+         location = "group:DLX/DLXColumnNode.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DLX/DLXGridNode.swift">
+      </FileRef>
+      <FileRef
          location = "group:LICENSE">
       </FileRef>
       <FileRef
@@ -20,13 +26,14 @@
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXNode.swift">
       </FileRef>
       <FileRef
-         location = "group:DLXColumnNode.swift">
-      </FileRef>
-      <FileRef
-         location = "group:DLXGridNode.swift">
-      </FileRef>
-      <FileRef
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Sudoku Code">
+      <FileRef
+         location = "group:Sudoku/SudokuSolver.swift">
       </FileRef>
    </Group>
 </Workspace>
