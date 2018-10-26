@@ -20,7 +20,6 @@ class DLXAlgorithm : Operation
 
   override func main()
   {
-    dlx.log("Starting DLX")
     dlx.resetSolutions()
 
     dive(0);
@@ -38,7 +37,7 @@ class DLXAlgorithm : Operation
   
   func dive(_ level:Int)
   {
-    guard let c = dlx.root.pickColumn() else {
+    guard let c = dlx.pickColumn() else {
       dlx.addSolution(Q.sorted())
       return
     }
@@ -46,8 +45,6 @@ class DLXAlgorithm : Operation
     guard c.rows > 0 else { return }
     
     c.cover()
-    
-    dlx.log("Covered column "+c.col.description)
     
     var r = c.down as? DLXGridNode
     while r != nil, self.isCancelled == false
@@ -58,7 +55,6 @@ class DLXAlgorithm : Operation
       while j !== r
       {
         j.col.cover()
-        dlx.log("Covered column " + j.col.col.description + " (from row " + j.row.description + ")")
         j = j.right as! DLXGridNode
       }
       
@@ -68,7 +64,6 @@ class DLXAlgorithm : Operation
       while j !== r
       {
         j.col.uncover()
-        dlx.log("Uncovered column " + j.col.col.description + " (from row " + j.row.description + ")")
         j = j.left as! DLXGridNode
       }
       
@@ -77,25 +72,5 @@ class DLXAlgorithm : Operation
     }
     
     c.uncover()
-    dlx.log("Uncovered column "+c.col.description)
   }
 }
-  
-  
-    /*
-    for i in 1..<10
-    {
-      if self.isCancelled
-      {
-        NotificationCenter.default.post(name: .DLXAlgorithmCanceled, object: self.dlx)
-        return
-      }
-      
-      let delay = Double.random(in:0.5...3.0)
-      print("Time to next solution: ", delay.description)
-      Thread.sleep(forTimeInterval: delay)
-      
-      dlx.addSolution(Array(1...i))
-    }
- */
-

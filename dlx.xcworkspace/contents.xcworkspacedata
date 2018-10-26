@@ -14,10 +14,16 @@
          location = "group:README.md">
       </FileRef>
       <FileRef
+         location = "group:DLX/DLX.swift">
+      </FileRef>
+      <FileRef
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXNode.swift">
       </FileRef>
       <FileRef
-         location = "group:DLX/DLX.swift">
+         location = "group:DLXColumnNode.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DLXGridNode.swift">
       </FileRef>
       <FileRef
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift">
