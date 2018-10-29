@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestDrivers/DLXTestDriver-iOS/DLXTestDriver-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TestDrivers/DLXTestDriver-OSX/DLXTestDriver-OSX.xcodeproj">
    </FileRef>
    <Group
@@ -27,6 +30,9 @@
       </FileRef>
       <FileRef
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift">
+      </FileRef>
+      <FileRef
+         location = "group:TestDrivers/DLXTestDriver-iOS/sudoku4.swift">
       </FileRef>
    </Group>
    <Group

@@ -152,6 +152,7 @@ class ViewController: NSViewController {
   {
     statusLabel.stringValue = "Canceled"
     if let S = dlx?.solutions {
+      solutionCountLabel.stringValue = S.count.description
       while solutionsDisplayed < S.count, solutionsDisplayed < maxSolutionsToDisplay
       {
         log(S[solutionsDisplayed].description)
@@ -176,6 +177,7 @@ class ViewController: NSViewController {
   {
     statusLabel.stringValue = "Completed"
     if let S = dlx?.solutions {
+      solutionCountLabel.stringValue = S.count.description
       while solutionsDisplayed < S.count, solutionsDisplayed < maxSolutionsToDisplay
       {
         log(S[solutionsDisplayed].description)
