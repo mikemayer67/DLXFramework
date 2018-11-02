@@ -73,8 +73,6 @@ class ViewController: NSViewController {
       startButton.isEnabled = (dlx != nil && dlx!.isComplete==false )
       dataSetPopup.isEnabled = true
     }
-    
-    dataSetPopup.isEnabled = ( isRunning == false )
   }
   
   @IBAction func handleStart(_ sender: NSButton)

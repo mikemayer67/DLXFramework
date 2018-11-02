@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestDrivers/SudokuTestDriver-OSX/SudokuTestDriver-OSX.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TestDrivers/DLXTestDriver-iOS/DLXTestDriver-iOS.xcodeproj">
    </FileRef>
    <FileRef
@@ -10,12 +13,6 @@
    <Group
       location = "container:"
       name = "DLX Code">
-      <FileRef
-         location = "group:DLX/DLXColumnNode.swift">
-      </FileRef>
-      <FileRef
-         location = "group:DLX/DLXGridNode.swift">
-      </FileRef>
       <FileRef
          location = "group:LICENSE">
       </FileRef>
@@ -29,6 +26,12 @@
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXNode.swift">
       </FileRef>
       <FileRef
+         location = "group:DLX/DLXColumnNode.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DLX/DLXGridNode.swift">
+      </FileRef>
+      <FileRef
          location = "group:/Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift">
       </FileRef>
       <FileRef
@@ -39,7 +42,10 @@
       location = "container:"
       name = "Sudoku Code">
       <FileRef
-         location = "group:Sudoku/SudokuSolver.swift">
+         location = "group:Sudoku/SudokuView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/mike/workbench/DLXFramework/Sudoku/DLXSudoku.swift">
       </FileRef>
    </Group>
 </Workspace>
