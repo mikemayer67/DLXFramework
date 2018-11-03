@@ -53,14 +53,14 @@ class SudokuView: NSView
 
       self.backgroundView.frame = NSRect(x: xo, y: yo, width: gridSize, height: gridSize )
       
-      var xi = boxBorder
+      var yi = gridSize - boxBorder - cellSize
       for i in 0...8 {
-        var yj = gridSize - boxBorder - cellSize
+        var xj = boxBorder
         for j in 0...8 {
-          self.cellViews[i][j].frame = NSRect(x:xi, y:yj, width:cellSize, height:cellSize)
-          yj -= cellSize + ( ( j%3 == 2 ) ? boxBorder : cellBorder )
+          self.cellViews[i][j].frame = NSRect(x:xj, y:yi, width:cellSize, height:cellSize)
+          xj += cellSize + ( ( j%3 == 2 ) ? boxBorder : cellBorder)
         }
-        xi += cellSize + ( ( i%3 == 2 ) ? boxBorder : cellBorder)
+        yi -= cellSize + ( ( i%3 == 2 ) ? boxBorder : cellBorder )
       }
     }
   }
@@ -107,6 +107,15 @@ class SudokuView: NSView
     for (row,col,digit) in startingGrid
     {
       setCell(row:row, col:col, digit:digit, locked:true)
+    }
+  }
+  
+  func set(solutionGrid:[(Int,Int,Int)])
+  {
+    clearUnlockedCells()
+    for (row,col,digit) in solutionGrid
+    {
+      setCell(row:row, col:col, digit:digit, locked:false)
     }
   }
   

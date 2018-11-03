@@ -64,8 +64,24 @@ class DLXSudoku : DLX
         }
         if c == nil { throw DLXSudokuError.InvalidStartingGrid }
         
-        c!.uncover()
+        c!.cover()
       }
     }
+  }
+  
+  func sudokuSolution(_ n:Int) -> [(row:Int,col:Int,digit:Int)]?
+  {
+    var rval = [(row:Int,col:Int,digit:Int)]()
+    
+    if n < solutions.count {
+      let rows = solutions[n]
+      for row in rows {
+        let r = row/81
+        let c = (row%81)/9
+        let d = row%9 + 1
+        rval.append( (r,c,d) )
+      }
+    }
+    return rval
   }
 }
