@@ -17,7 +17,7 @@
 		2709C33D2185631F004A6125 /* DLXGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709C3372185631F004A6125 /* DLXGridNode.swift */; };
 		2709C33E2185631F004A6125 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709C3382185631F004A6125 /* DLX.swift */; };
 		2709C33F2185631F004A6125 /* DLXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709C3392185631F004A6125 /* DLXNode.swift */; };
-		2744281D2186AE40000F2760 /* sudoku4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744281C2186AE40000F2760 /* sudoku4.swift */; };
+		27C137C9218E2C6C00115610 /* sudoku4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C137C8218E2C6C00115610 /* sudoku4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		2709C3372185631F004A6125 /* DLXGridNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXGridNode.swift; path = ../../DLX/DLXGridNode.swift; sourceTree = "<group>"; };
 		2709C3382185631F004A6125 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../../DLX/DLX.swift; sourceTree = "<group>"; };
 		2709C3392185631F004A6125 /* DLXNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXNode.swift; path = ../../DLX/DLXNode.swift; sourceTree = "<group>"; };
-		2744281C2186AE40000F2760 /* sudoku4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sudoku4.swift; sourceTree = "<group>"; };
+		27C137C8218E2C6C00115610 /* sudoku4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sudoku4.swift; path = ../sudoku4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				2709C3382185631F004A6125 /* DLX.swift */,
 				2709C3392185631F004A6125 /* DLXNode.swift */,
 				2709C3352185631F004A6125 /* DLXAlgorithm.swift */,
-				2744281C2186AE40000F2760 /* sudoku4.swift */,
+				27C137C8218E2C6C00115610 /* sudoku4.swift */,
 			);
 			name = "Common Code";
 			sourceTree = "<group>";
@@ -161,7 +161,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2744281D2186AE40000F2760 /* sudoku4.swift in Sources */,
 				2709C33B2185631F004A6125 /* DLXAlgorithm.swift in Sources */,
 				2709C324218562EE004A6125 /* DLXTestViewController.swift in Sources */,
 				2709C33A2185631F004A6125 /* DLXColumnNode.swift in Sources */,
@@ -169,6 +168,7 @@
 				2709C33E2185631F004A6125 /* DLX.swift in Sources */,
 				2709C33F2185631F004A6125 /* DLXNode.swift in Sources */,
 				2709C322218562EE004A6125 /* AppDelegate.swift in Sources */,
+				27C137C9218E2C6C00115610 /* sudoku4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

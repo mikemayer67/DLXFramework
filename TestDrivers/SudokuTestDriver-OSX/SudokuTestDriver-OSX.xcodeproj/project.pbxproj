@@ -17,7 +17,7 @@
 		27067D69218813BD0074C622 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27067D64218813BD0074C622 /* DLX.swift */; };
 		27067D6A218813BD0074C622 /* DLXAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27067D65218813BD0074C622 /* DLXAlgorithm.swift */; };
 		27067D6C218813C20074C622 /* DLXSudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27067D6B218813C20074C622 /* DLXSudoku.swift */; };
-		27067D722189FD760074C622 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27067D712189FD760074C622 /* SudokuView.swift */; };
+		27C137F6218E2E5C00115610 /* SudokuView-OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C137F5218E2E5B00115610 /* SudokuView-OSX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		27067D64218813BD0074C622 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../../DLX/DLX.swift; sourceTree = "<group>"; };
 		27067D65218813BD0074C622 /* DLXAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXAlgorithm.swift; path = ../../DLX/DLXAlgorithm.swift; sourceTree = "<group>"; };
 		27067D6B218813C20074C622 /* DLXSudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLXSudoku.swift; path = /Users/mike/workbench/DLXFramework/Sudoku/DLXSudoku.swift; sourceTree = "<absolute>"; };
-		27067D712189FD760074C622 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SudokuView.swift; path = ../../Sudoku/SudokuView.swift; sourceTree = "<group>"; };
+		27C137F5218E2E5B00115610 /* SudokuView-OSX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SudokuView-OSX.swift"; path = "/Users/mike/workbench/DLXFramework/Sudoku/SudokuView-OSX.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 				27067D61218813BD0074C622 /* DLXGridNode.swift */,
 				27067D65218813BD0074C622 /* DLXAlgorithm.swift */,
 				27067D6B218813C20074C622 /* DLXSudoku.swift */,
-				27067D712189FD760074C622 /* SudokuView.swift */,
+				27C137F5218E2E5B00115610 /* SudokuView-OSX.swift */,
 			);
 			name = "DLX Code";
 			sourceTree = "<group>";
@@ -162,7 +162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27067D722189FD760074C622 /* SudokuView.swift in Sources */,
 				27067D69218813BD0074C622 /* DLX.swift in Sources */,
 				27067D5321880BFD0074C622 /* ViewController.swift in Sources */,
 				27067D66218813BD0074C622 /* DLXGridNode.swift in Sources */,
@@ -170,6 +169,7 @@
 				27067D68218813BD0074C622 /* DLXNode.swift in Sources */,
 				27067D6C218813C20074C622 /* DLXSudoku.swift in Sources */,
 				27067D5121880BFD0074C622 /* AppDelegate.swift in Sources */,
+				27C137F6218E2E5C00115610 /* SudokuView-OSX.swift in Sources */,
 				27067D6A218813BD0074C622 /* DLXAlgorithm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

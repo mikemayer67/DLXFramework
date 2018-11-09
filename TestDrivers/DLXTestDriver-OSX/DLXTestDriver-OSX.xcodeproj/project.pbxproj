@@ -15,7 +15,7 @@
 		2738B09E217CEBBE00D25694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2738B09C217CEBBE00D25694 /* Main.storyboard */; };
 		2738B0AA217CEC1100D25694 /* DLX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A7217CEC1100D25694 /* DLX.swift */; };
 		2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738B0A9217CEC1100D25694 /* DLXNode.swift */; };
-		2744281F2186AED3000F2760 /* sudoku4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744281E2186AED3000F2760 /* sudoku4.swift */; };
+		27C137C7218E2C6900115610 /* sudoku4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C137C6218E2C6900115610 /* sudoku4.swift */; };
 		27D65211217EE9FD00463274 /* DLXAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D65210217EE9FD00463274 /* DLXAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		2738B0A0217CEBBE00D25694 /* DLXTestDriver_OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DLXTestDriver_OSX.entitlements; sourceTree = "<group>"; };
 		2738B0A7217CEC1100D25694 /* DLX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLX.swift; path = ../../DLX/DLX.swift; sourceTree = "<group>"; };
 		2738B0A9217CEC1100D25694 /* DLXNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLXNode.swift; path = ../../DLX/DLXNode.swift; sourceTree = "<group>"; };
-		2744281E2186AED3000F2760 /* sudoku4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sudoku4.swift; path = "../DLXTestDriver-iOS/sudoku4.swift"; sourceTree = "<group>"; };
+		27C137C6218E2C6900115610 /* sudoku4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sudoku4.swift; path = ../sudoku4.swift; sourceTree = "<group>"; };
 		27D65210217EE9FD00463274 /* DLXAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DLXAlgorithm.swift; path = /Users/mike/workbench/DLXFramework/DLX/DLXAlgorithm.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 				2738B0A9217CEC1100D25694 /* DLXNode.swift */,
 				2738B0A7217CEC1100D25694 /* DLX.swift */,
 				27D65210217EE9FD00463274 /* DLXAlgorithm.swift */,
-				2744281E2186AED3000F2760 /* sudoku4.swift */,
+				27C137C6218E2C6900115610 /* sudoku4.swift */,
 			);
 			name = "Common Code";
 			sourceTree = "<group>";
@@ -165,8 +165,8 @@
 				2709B0272183BA4A004A6125 /* DLXGridNode.swift in Sources */,
 				2738B099217CEBBD00D25694 /* ViewController.swift in Sources */,
 				2738B0AC217CEC1100D25694 /* DLXNode.swift in Sources */,
-				2744281F2186AED3000F2760 /* sudoku4.swift in Sources */,
 				2738B097217CEBBD00D25694 /* AppDelegate.swift in Sources */,
+				27C137C7218E2C6900115610 /* sudoku4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
