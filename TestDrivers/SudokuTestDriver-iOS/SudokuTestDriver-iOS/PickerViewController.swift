@@ -16,6 +16,10 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    if let i = delegate?.currentDataSetIndex()
+    {
+      pickerView.selectRow(i, inComponent: 0, animated: true)
+    }
   }
   
   
