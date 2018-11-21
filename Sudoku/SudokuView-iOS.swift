@@ -66,14 +66,14 @@ class SudokuView : UIView
     
     backgroundView.frame = CGRect(x: xo, y: yo, width: gridSize, height: gridSize )
     
-    var yi = gridSize - boxBorder - cellSize
+    var yi =  boxBorder
     for i in 0...8 {
       var xj = boxBorder
       for j in 0...8 {
         self.cellViews[i][j].frame = CGRect(x:xj, y:yi, width:cellSize, height:cellSize)
         xj += cellSize + ( ( j%3 == 2 ) ? boxBorder : cellBorder)
       }
-      yi -= cellSize + ( ( i%3 == 2 ) ? boxBorder : cellBorder )
+      yi += cellSize + ( ( i%3 == 2 ) ? boxBorder : cellBorder )
     }
   }
   

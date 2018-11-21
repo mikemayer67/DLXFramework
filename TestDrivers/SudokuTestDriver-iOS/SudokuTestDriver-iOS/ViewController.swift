@@ -134,7 +134,7 @@ class ViewController: UIViewController
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
+        
     curDataSet = dataSetNames[ Int.random(in: 1...dataSetNames.count) - 1]
     
     updateAll()
@@ -173,6 +173,17 @@ class ViewController: UIViewController
     {
       pvc.delegate = self
     }
+  }
+  
+  func currentDataSetIndex() -> Int?
+  {
+    for i in 0...dataSetNames.count-1
+    {
+      if dataSetNames[i] == curDataSet {
+        return i
+      }
+    }
+    return nil
   }
   
   
