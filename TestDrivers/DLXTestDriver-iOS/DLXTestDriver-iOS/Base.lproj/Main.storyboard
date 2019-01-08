@@ -110,7 +110,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAL-dg-PtK">
-                                <rect key="frame" x="8" y="629" width="51" height="30"/>
+                                <rect key="frame" x="314" y="629" width="51" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="JY3-9P-jjc"/>
                                 </constraints>
@@ -130,13 +130,26 @@
                                     <action selector="handleStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kv8-Us-jvj"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dm9-Cn-DBV">
+                                <rect key="frame" x="10" y="637" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="htz-9O-S6z"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="solve"/>
+                                    <segment title="assess"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleSolutionType:" destination="BYZ-38-t0r" eventType="valueChanged" id="RF5-eP-1ef"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jAL-dg-PtK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="71h-zs-KHt"/>
                             <constraint firstItem="nBT-VW-ho3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Wn-eH-3xq"/>
                             <constraint firstItem="t4K-Lw-Gdr" firstAttribute="top" secondItem="7lK-EC-BaL" secondAttribute="top" id="AIB-ID-EaH"/>
                             <constraint firstItem="t4K-Lw-Gdr" firstAttribute="top" secondItem="7lK-EC-BaL" secondAttribute="bottom" id="JX6-Nb-k1D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jAL-dg-PtK" secondAttribute="trailing" constant="10" id="MvL-DT-4is"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nBT-VW-ho3" secondAttribute="trailing" constant="16" id="NYd-mP-LFp"/>
                             <constraint firstItem="jAL-dg-PtK" firstAttribute="top" secondItem="t4K-Lw-Gdr" secondAttribute="bottom" constant="4" id="QVc-Iq-CnW"/>
                             <constraint firstItem="t4K-Lw-Gdr" firstAttribute="leading" secondItem="7lK-EC-BaL" secondAttribute="trailing" constant="-350" id="Raq-Lg-VYG">
@@ -149,6 +162,7 @@
                                 <variation key="heightClass=compact" constant="4"/>
                             </constraint>
                             <constraint firstItem="t4K-Lw-Gdr" firstAttribute="width" secondItem="7lK-EC-BaL" secondAttribute="width" id="Yey-dj-uJH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dm9-Cn-DBV" secondAttribute="bottom" constant="10" id="YfO-JG-z7S"/>
                             <constraint firstItem="t4K-Lw-Gdr" firstAttribute="height" secondItem="7lK-EC-BaL" secondAttribute="height" id="gsD-6k-Kw3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7lK-EC-BaL" secondAttribute="bottom" constant="126" id="hIx-Li-Z6a">
                                 <variation key="heightClass=compact" constant="0.0"/>
@@ -164,6 +178,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fjA-2w-OPD" secondAttribute="trailing" constant="10" id="qfd-BH-LDF"/>
                             <constraint firstItem="7lK-EC-BaL" firstAttribute="top" secondItem="nBT-VW-ho3" secondAttribute="bottom" constant="8" id="rlS-zZ-tv5"/>
                             <constraint firstItem="7lK-EC-BaL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="spF-Ts-Y8g"/>
+                            <constraint firstItem="Dm9-Cn-DBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vAr-Gt-pC4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7lK-EC-BaL" secondAttribute="trailing" id="yRH-KD-gej"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -179,8 +194,8 @@
                                 <exclude reference="Yey-dj-uJH"/>
                                 <exclude reference="gsD-6k-Kw3"/>
                                 <exclude reference="hWC-6X-Nhf"/>
-                                <exclude reference="XF0-Rj-97I"/>
                                 <exclude reference="S6V-fz-ViE"/>
+                                <exclude reference="XF0-Rj-97I"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -191,9 +206,9 @@
                                 <include reference="Raq-Lg-VYG"/>
                                 <include reference="Yey-dj-uJH"/>
                                 <exclude reference="gsD-6k-Kw3"/>
+                                <include reference="S6V-fz-ViE"/>
                                 <exclude reference="QVc-Iq-CnW"/>
                                 <include reference="XF0-Rj-97I"/>
-                                <include reference="S6V-fz-ViE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -209,6 +224,7 @@
                         <outlet property="cancelButton" destination="jAL-dg-PtK" id="fx0-j7-Jnk"/>
                         <outlet property="countLabel" destination="luU-as-MXT" id="gni-69-ye8"/>
                         <outlet property="dataSetPicker" destination="3cC-6n-KEn" id="URc-wP-kOD"/>
+                        <outlet property="solutionType" destination="Dm9-Cn-DBV" id="IKm-ry-l0u"/>
                         <outlet property="solutionsText" destination="Pa5-jf-6yI" id="0Wp-bT-5ie"/>
                         <outlet property="startButton" destination="fjA-2w-OPD" id="GcX-xC-McH"/>
                         <outlet property="statusLabel" destination="YmI-qE-Huq" id="Squ-Bh-O0e"/>

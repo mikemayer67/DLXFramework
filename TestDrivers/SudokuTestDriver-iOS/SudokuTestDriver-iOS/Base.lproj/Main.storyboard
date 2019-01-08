@@ -310,7 +310,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-157" y="-220"/>
+            <point key="canvasLocation" x="-528" y="-330"/>
         </scene>
         <!--Picker View Controller-->
         <scene sceneID="ZB2-LS-pRA">
@@ -374,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCY-0m-hZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="-193"/>
+            <point key="canvasLocation" x="317" y="-397"/>
         </scene>
     </scenes>
 </document>

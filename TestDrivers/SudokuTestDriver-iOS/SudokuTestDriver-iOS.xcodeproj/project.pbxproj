@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		278117B92195F01700BD0AF9 /* DataSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278117B82195F01700BD0AF9 /* DataSets.swift */; };
 		278117BB2195F28800BD0AF9 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278117BA2195F28800BD0AF9 /* PickerViewController.swift */; };
 		278117BD2195F7A300BD0AF9 /* PickerBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278117BC2195F7A300BD0AF9 /* PickerBackgroundView.swift */; };
 		27C137D7218E2D1E00115610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C137D6218E2D1E00115610 /* AppDelegate.swift */; };
@@ -25,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		278117B82195F01700BD0AF9 /* DataSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSets.swift; sourceTree = "<group>"; };
 		278117BA2195F28800BD0AF9 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		278117BC2195F7A300BD0AF9 /* PickerBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBackgroundView.swift; sourceTree = "<group>"; };
 		27C137D3218E2D1E00115610 /* SudokuTestDriver-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SudokuTestDriver-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +81,6 @@
 				27C137DD218E2D1F00115610 /* Assets.xcassets */,
 				27C137DF218E2D1F00115610 /* LaunchScreen.storyboard */,
 				27C137E2218E2D1F00115610 /* Info.plist */,
-				278117B82195F01700BD0AF9 /* DataSets.swift */,
 			);
 			path = "SudokuTestDriver-iOS";
 			sourceTree = "<group>";
@@ -180,7 +177,6 @@
 				27C137F0218E2D5700115610 /* DLXGridNode.swift in Sources */,
 				27C137F4218E2D5E00115610 /* DLXSudoku.swift in Sources */,
 				278117BD2195F7A300BD0AF9 /* PickerBackgroundView.swift in Sources */,
-				278117B92195F01700BD0AF9 /* DataSets.swift in Sources */,
 				278117BB2195F28800BD0AF9 /* PickerViewController.swift in Sources */,
 				27C137F2218E2D5700115610 /* DLX.swift in Sources */,
 				27C137F8218E50CA00115610 /* SudokuView-iOS.swift in Sources */,

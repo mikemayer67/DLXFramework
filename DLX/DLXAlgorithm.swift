@@ -10,6 +10,7 @@ import Foundation
 class DLXAlgorithm : Operation
 {
   let dlx : DLX!
+  var auditStatus = DLXSolutionStatus.NoSolution
   
   init(_ dlx:DLX)
   {
@@ -22,7 +23,7 @@ class DLXAlgorithm : Operation
   {
     dlx.resetSolutions()
 
-    dive(0);
+    dive(0,audit:false);
     
     if self.isCancelled
     {
@@ -35,15 +36,43 @@ class DLXAlgorithm : Operation
     }
   }
   
-  func dive(_ level:Int)
+  func audit() -> DLXSolutionStatus
   {
-    guard let c = dlx.pickColumn() else {
-      dlx.addSolution(Q.sorted())
-      return
+    dlx.resetSolutions()
+    
+    auditStatus = DLXSolutionStatus.NoSolution
+    
+    dive(0,audit:true)
+    
+    return auditStatus
+  }
+  
+  
+  func dive(_ level:Int, audit:Bool)
+  {
+    guard let c = dlx.pickColumn() else
+    {
+      if audit {
+        switch auditStatus {
+        case .NoSolution:
+          auditStatus = .UniqueSolution(Q.sorted())
+          return
+        case .UniqueSolution(_):
+          auditStatus = .MultipleSolutions
+          return
+        case .MultipleSolutions:
+          fatalError("Should never get here \(#file):\(#line)")
+        }
+      }
+      else
+      {
+        dlx.addSolution(Q.sorted())
+        return
+      }
     }
-    
+
     guard c.rows > 0 else { return }
-    
+      
     c.cover()
     
     var r = c.down as? DLXGridNode
@@ -58,7 +87,8 @@ class DLXAlgorithm : Operation
         j = j.right as! DLXGridNode
       }
       
-      dive( 1+level )
+      dive( 1+level, audit:audit )
+      if audit, case .MultipleSolutions = auditStatus { return }
       
       j = r!.left as! DLXGridNode
       while j !== r

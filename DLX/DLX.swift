@@ -13,6 +13,13 @@ enum DLXError : Error
   case InputNoCoverage
 }
 
+enum DLXSolutionStatus
+{
+  case NoSolution
+  case UniqueSolution([Int])
+  case MultipleSolutions
+}
+
 extension Notification.Name {
   static let DLXSolutionFound      = Notification.Name("DLXSolutionAdded")
   static let DLXAlgorithmCanceled  = Notification.Name("DLXAlgorithmCanceled")
@@ -124,9 +131,10 @@ class DLX : DLXNode
   {
     dataQueue.sync { solutions_.removeAll() }
   }
+
   
-  // The final two methos control the execution of the dancing link
-  //   algroithm (in a background thread).
+  // The next two methods control the execution of the dancing link
+  //   algroithm in a background thread.
   //
   // The solve method kicks off the algorithm iusing the DLXSolver operation
   // The cancel method kills the algorithm (if running).
@@ -159,5 +167,19 @@ class DLX : DLXNode
     if isComplete { return }
     
     solverQueue.cancelAllOperations()
+  }
+  
+  // The final method uses the dancing link algorithm to evaluate the
+  //   nature of the coverage problem: no solution, unique solution, or
+  //   multiple solutions.  If there is a unique solution, it is returned
+  //   as part of the status.
+  //
+  // This method runs synchronously and does not use notification to
+  //   provide run status
+  
+  func evaluate() -> DLXSolutionStatus
+  {
+    let algorithm = DLXAlgorithm(self)
+    return algorithm.audit()
   }
 }

@@ -17,8 +17,17 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
   @IBOutlet weak var solutionsText: UITextView!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var startButton: UIButton!
+  @IBOutlet weak var solutionType: UISegmentedControl!
   
-  var isRunning = false
+  enum RunState
+  {
+    case inactive
+    case findingSolutions
+    case assessingPuzzle
+  }
+  
+  var runState : RunState = .inactive
+  var findSolutions = true
   var dlx : DLX?
   
   let dataSets : Dictionary<String,[[Int]]> = [
@@ -48,6 +57,9 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     selectDataSet(dataSetPicker.selectedRow(inComponent: 0))
     updateAll()
     
+    solutionType.selectedSegmentIndex = (findSolutions ? 0 : 1)
+    handleSolutionType(solutionType)
+    
     NotificationCenter.default.addObserver(forName:.DLXSolutionFound,     object:nil, queue:OperationQueue.main, using:handleNewSolutionNotification)
     NotificationCenter.default.addObserver(forName:.DLXAlgorithmCanceled, object:nil, queue:OperationQueue.main, using:handleCanceledNotification)
     NotificationCenter.default.addObserver(forName:.DLXAlgorithmComplete, object:nil, queue:OperationQueue.main, using:handleCompletedNotification)
@@ -64,17 +76,20 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
   
   func updateAll()
   {
-    if isRunning {
+    switch runState
+    {
+    case .inactive:
+      cancelButton.isHidden = true
+      startButton.isHidden = (dlx == nil || dlx!.isComplete == true )
+      dataSetPicker.isUserInteractionEnabled = true
+    case .findingSolutions:
       cancelButton.isHidden = false
       startButton.isHidden = true
       dataSetPicker.isUserInteractionEnabled = false
-    }
-    else
-    {
+    case .assessingPuzzle:
       cancelButton.isHidden = true
-
-      startButton.isHidden = (dlx == nil || dlx!.isComplete == true )
-      dataSetPicker.isUserInteractionEnabled = true
+      startButton.isHidden = true
+      dataSetPicker.isUserInteractionEnabled = false
     }
   }
   
@@ -89,13 +104,40 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
       return
     }
     
-    isRunning = true
-    resetFields()
-    statusLabel.text = "Running"
-    countLabel.text = "(no solutions)"
-    updateAll()
-    
-    dlx!.solve()
+    if findSolutions
+    {
+      runState = .findingSolutions
+      resetFields()
+      statusLabel.text = "Running"
+      countLabel.text = "(no solutions)"
+      updateAll()
+      
+      dlx!.solve()
+    }
+    else
+    {
+      runState = .assessingPuzzle
+      resetFields()
+      statusLabel.text = "Running"
+      updateAll()
+      
+      let status = dlx!.evaluate()
+      statusLabel.text = "Completed"
+
+      switch status
+      {
+      case .NoSolution:
+        countLabel.text = "No solutions found"
+      case .UniqueSolution(let solution):
+        countLabel.text = "Unique solution found"
+        log(solution.description)
+      case .MultipleSolutions:
+        countLabel.text = "Multiple solutions found"
+      }
+      
+      runState = .inactive
+      updateAll()
+    }
   }
   
   @IBAction func handleCancel(_ sender: UIButton)
@@ -104,11 +146,34 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
       logError("cancel button active when dlx is nil")
       return
     }
-    guard isRunning else {
+    if runState == .inactive || runState == .assessingPuzzle {
       logError("cancel button active when algorithm isn't running")
       return
     }
     dlx!.cancel()
+  }
+  
+  @IBAction func handleSolutionType(_ sender: UISegmentedControl)
+  {
+    switch sender.selectedSegmentIndex
+    {
+    case 0:
+      findSolutions = true
+      startButton.setTitle("Find Solutions", for: .normal)
+    case 1:
+      findSolutions = false
+      startButton.setTitle("Assess Puzzle", for: .normal)
+    default:
+      break
+    }
+    
+    if let row = curDataSetIndex
+    {
+      curDataSetIndex = nil
+      selectDataSet(row)
+    }
+    resetFields()
+    updateAll()
   }
   
   @objc func handleNewSolutionNotification(_ notification:Notification)
@@ -149,7 +214,7 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
       logInfo("DLX Algorithm was canceled with no solutions",
               color:UIColor(red:0.5, green:0.0, blue:0.0, alpha: 1.0))
     }
-    isRunning = false
+    runState = .inactive
     updateAll()
   }
   
@@ -176,7 +241,7 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     {
       logInfo("DLX Algorithm completed with no solutions")
     }
-    isRunning = false
+    runState = .inactive
     updateAll()
   }
   
@@ -200,6 +265,7 @@ class DLXTestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
   func selectDataSet(_ row:Int)
   {
     if row == curDataSetIndex { return }
+    curDataSetIndex = row
     
     resetFields()
     dlx = nil
